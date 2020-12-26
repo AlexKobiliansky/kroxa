@@ -13,14 +13,14 @@
   color: #666
 
 ::selection
-  background-color: $accent
+  background-color: $acc-orange
   color: #fff
 
 body
   font-size: 16px
   min-width: 320px
   position: relative
-  line-height: 1.5
+  line-height: 1.425
   font-family: $default-font
   overflow-x: hidden
   color: $text
@@ -48,7 +48,7 @@ a:hover, a:active, a:focus
   text-decoration: none
 
 a
-  color: $accent
+  color: $acc-orange
   text-decoration: none
 
 a, li, button
@@ -58,6 +58,25 @@ ul
   list-style-type: none
   padding: 0
   margin-bottom: 0
+li
+  position: relative
+  padding-left: 14px
+  &:before
+    content: ''
+    position: absolute
+    width: 6px
+    height: 6px
+    background-color: $acc-orange
+    border-radius: 50%
+    left: 0
+    top: 8px
+
+nav
+  li
+    padding-left: 0
+    &:before
+      display: none
+
 
 .hidden
   display: none!important
