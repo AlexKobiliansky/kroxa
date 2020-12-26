@@ -1,0 +1,97 @@
+.head-line
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 25px 0
+
+
+.shop-link
+  display: flex
+  align-items: center
+  font-size: 14px
+  line-height: 1
+  color: $text
+  .svg
+    height: 27px
+    width: auto
+    margin-right: 12px
+    +mt(.2s)
+    fill: #123862
+  &:hover
+    .svg
+      fill: $acc-orange
+  &-title
+    display: block
+    opacity: .79
+    margin-bottom: 9px
+  &-value
+    font-weight: 700
+
+.shop-link-cart
+  margin-left: 25px
+  .shop-link-title
+    margin-bottom: 3px
+  .shop-link-value
+    display: inline-block
+    background-color: $acc-orange
+    color: #fff
+    padding: 6px 9px 5px
+    border-radius: 20px
+
+.shop-links-wrapper
+  display: flex
+  align-items: center
+
+.top-contacts
+  display: inline-flex
+  align-items: center
+  .left
+    margin-right: 12px
+    a
+      display: block
+      text-align: right
+  .phone
+    font-size: 20px
+    line-height: 1
+    font-weight: 800
+    color: #4c5f7f
+    margin-bottom: 4px
+    &:hover
+      color: $acc-orange
+  .recall
+    color: #00bbea
+    font-size: 13px
+    text-decoration: underline
+    line-height: 1
+    &:hover
+      text-decoration: none
+
+.main-mnu
+  font-size: 18px
+  line-height: 1
+  ul
+    display: flex
+    justify-content: space-between
+  li
+    padding: 12px 14px 11px
+  a
+    display: inline-block
+
+    color: $text
+    position: relative
+    &:hover
+      color: $acc-orange
+      &:after
+        width: 100%
+        left: 0
+    &:after
+      content: ''
+      position: absolute
+      height: 1px
+      width: 0
+      background-color: $acc-orange
+      bottom: -3px
+      left: 50%
+      +mt(.2s)
+
+

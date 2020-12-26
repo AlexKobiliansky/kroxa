@@ -50,6 +50,7 @@ a:hover, a:active, a:focus
 a
   color: $acc-orange
   text-decoration: none
+  +mt(.2s)
 
 a, li, button
   outline: none!important
@@ -81,5 +82,23 @@ nav
 .hidden
   display: none!important
 // ======= END TEMPLATE STYLES =======
+.vk-link
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  width: 35px
+  height: 35px
+  border-radius: 50%
+  background-color: #006599
+  .svg
+    width: 20px
+    height: auto
+    fill: #fff
+    +mt(.2s)
+  &:hover
+    background-color: $acc-orange
+    .svg
+      fill: #000
+
 
 
