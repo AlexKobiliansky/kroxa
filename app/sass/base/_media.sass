@@ -3,17 +3,109 @@
 
 /*==========  Desktop First  ==========*/
 
+@media (max-width: 1500px)
+  .main-mnu
+    font-size: 16px
+    li
+      padding: 8px 10px
+
+  .main-mnu>ul>.droppy__parent>a
+    padding: 8px 30px 8px 10px
+    border-radius: 15px
+    &:before
+      width: 9px
+      height: 9px
+      right: 13px
+
+  .head-line
+    .logo
+      max-width: 150px
+
+@media (max-width: 1300px)
+  .main-mnu
+    display: none
+
+  .hamburger
+    display: block
+
 // ≥1200px
 +media-breakpoint-down(lg)
 
 // ≥992px
 +media-breakpoint-down(md)
+  .top-contacts
+    display: none
+
+  .shop-links-wrapper
+    margin-left: auto
+    margin-right: 20px
+
+  .shop-link
+    font-size: 12px
+
+  .shop-link-cart .shop-link-value
+    padding: 5px 6px 3px 5px
+
+  .shop-link-title
+    margin-bottom: 7px
 
 // ≥768px
 +media-breakpoint-down(sm)
 
 // ≥480px
 +media-breakpoint-down(xs)
+  .head-line
+    padding: 10px 0
+    .logo
+      max-width: 120px
+
+  .shop-links-wrapper
+    margin-right: 0
+
+  .shop-link
+    &-title
+      display: none
+    &-value
+      position: relative
+    .svg
+      height: 24px
+      margin-right: 8px
+    &-cart
+      margin-left: 15px
+
+@media (max-width: 410px)
+
+  .mobile-contacts
+    .phone
+      font-size: 22px
+    .recall
+      font-size: 16px
+
+  .mm-logo
+    width: 150px
+
+  .head-line
+    flex-wrap: wrap
+
+  .shop-links-wrapper
+    order: 2
+    width: 100%
+    justify-content: flex-end
+    position: relative
+    top: -8px
+
+
+  .shop-link
+    font-size: 10px
+    .svg
+      height: 20px
+      margin-right: 6px
+    &-cart
+      margin-left: 10px
+
+  .hamburger
+    padding: 5px 0 5px 5px
+    top: 0
 
 
 /*==========  Mobile First  ==========*/
