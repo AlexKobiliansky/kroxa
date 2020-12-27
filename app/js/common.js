@@ -83,7 +83,35 @@ $(document).ready(function(){
 
     $('.droppy__parent').click(function(){
         $(this).toggleClass('opened');
-    })
+    });
+
+    $('.intro-slider').owlCarousel({
+        loop:true,
+        nav:true,
+        items: 1,
+        dots: true,
+        animateIn: "fadeIn",
+        animateOut: "fadeOut",
+        mouseDrag: false,
+        touchDrag: false,
+        smartSpeed:700,
+        // autoplay: true,
+        autoplayTimeout: 7000,
+        autoplaySpeed: 2000,
+        navText: false,
+        margin: 30,
+        responsive: {
+            0: {
+                nav: false,
+            },
+            480: {
+                nav: false,
+            },
+            768: {
+                nav: true,
+            }
+        }
+    });
 
 
     //E-mail Ajax Send

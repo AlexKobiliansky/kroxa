@@ -3,7 +3,54 @@
 
 /*==========  Desktop First  ==========*/
 
+@media (max-width: 1700px)
+  .intro-slide
+    padding-left: 80px
+    padding-right: 80px
+
+  .intro-slider
+    .owl-nav
+      button.owl-prev
+        left: 0
+      button.owl-next
+        right: 0
+
 @media (max-width: 1500px)
+
+  .container
+    padding-left: 15px
+    padding-right: 15px
+
+  .s-intro
+    padding-top: 75px
+
+  .intro-slider
+    padding-bottom: 80px
+
+  .intro-slide
+    h1
+      font-size: 48px
+    &-desc
+      font-size: 20px
+      margin-bottom: 35px
+
+  .intro-decor
+    &-1
+      width: 450px
+      height: 450px
+      left: -170px
+    &-2
+      width: 300px
+      height: 300px
+      right: 400px
+    &-3
+      width: 600px
+      height: 600px
+    &-4
+      width: 200px
+      height: 200px
+      right: 366px
+
   .main-mnu
     font-size: 16px
     li
@@ -30,9 +77,40 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+  .s-intro
+    overflow: hidden
+
+  .intro-slide
+    padding-right: 20px
+    h1
+      font-size: 36px
+
+  .intro-decor
+    &-2
+      width: 200px
+      height: 200px
+      right: 300px
+      bottom: 50px
+    &-3
+      width: 400px
+      height: 400px
+      right: -30px
+    &-4
+      right: 266px
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .intro-slide
+    padding-left: 55px
+    &-right
+      padding-left: 0
+    h1
+      font-size: 24px
+    &-desc
+      font-size: 16px
+      margin-bottom: 25px
+
   .top-contacts
     display: none
 
@@ -52,8 +130,65 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .s-intro
+    padding-top: 25px
+    padding-bottom: 50px
+
+  .intro-slider
+    padding-bottom: 60px
+    .owl-dots
+      text-align: center
+      width: 100%
+      button.owl-dot
+        margin: 0 7px
+
+  .intro-decor
+    &-4
+      display: none
+    &-2
+      display: none
+
+  .intro-slide
+    padding: 0
+    flex-direction: column
+    text-align: center
+    .img-responsive
+      margin: 0 auto
+    &>div
+      width: 100%
+    &-left
+      margin-bottom: 50px
+    h1
+      font-size: 36px
+    &-desc
+      font-size: 20px
+
+
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .intro-slider
+    padding-bottom: 30px
+
+  .intro-slide
+    h1
+      font-size: 24px
+    &-desc
+      font-size: 16px
+
+  .intro-decor
+    &-1
+      width: 300px
+      height: 300px
+    &-3
+      width: 350px
+      height: 350px
+    &-4
+      display: block
+      top: auto
+      bottom: 150px
+      right: 100px
+
   .head-line
     padding: 10px 0
     .logo
@@ -74,6 +209,14 @@
       margin-left: 15px
 
 @media (max-width: 410px)
+
+  .intro-decor
+    &-3
+      width: 300px
+      height: 300px
+    &-4
+      width: 150px
+      height: 150px
 
   .mobile-contacts
     .phone
