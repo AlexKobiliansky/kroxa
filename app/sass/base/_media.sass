@@ -89,6 +89,31 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .footer-wrap
+    flex-direction: column-reverse
+    margin-bottom: 20px
+
+  .footer-right
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 40px
+    padding-left: 0
+    .logo
+      margin-bottom: 0
+
+  .footer-left
+    width: 100%
+    justify-content: space-between
+
+  .foot-item
+    margin-right: 0
+    width: calc(33.3333% - 15px)
+
+  .dev-block
+    margin-left: 0
+
   .s-reviews
     padding: 50px 0
     .section-title
@@ -162,6 +187,18 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .foot-item
+    padding-right: 0
+
+  .footer-bottom-line
+    flex-wrap: wrap
+
+  .dev-block
+    order: 2
+    width: 100%
+    text-align: center
+    margin-top: 20px
+
   .s-advantages
     padding-top: 35px
     padding-bottom: 50px
@@ -220,6 +257,36 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+
+  .footer-right
+    display: none
+
+  .footer-left
+    flex-wrap: wrap
+  .footer-wrap
+    margin-bottom: 0
+
+  .foot-item
+    width: calc(50% - 10px)
+    margin-bottom: 20px
+
+
+  .footer-bottom-line
+    .right
+      width: 100%
+      display: flex
+      justify-content: space-between
+      margin-bottom: 10px
+
+  .copyright
+    width: 50%
+    order: 2
+
+  .dev-block
+    width: 50%
+    text-align: right
+    margin-top: 0
+
   .reviews-slider
     padding: 0
 
@@ -262,6 +329,38 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .foot-item
+    width: 100%
+    text-align: center
+    line-height: 1.7
+    &-title
+      border-bottom:  none
+      position: relative
+      &:after
+        content: ''
+        position: absolute
+        width: 100px
+        height: 1px
+        background-color: $text
+        bottom: 0
+        left: calc(50% - 50px)
+
+
+  .footer-bottom-line
+    .right
+      flex-direction: column
+      text-align: center
+      a
+        margin-right: 0
+        margin-bottom: 10px
+
+  .copyright, .dev-block
+    width: 100%
+    text-align: center
+
+  .copyright
+    margin-bottom: 10px
 
   .reviews-slider .slick-dots button
     margin: 0 7px
