@@ -17,6 +17,14 @@
 
 @media (max-width: 1500px)
 
+  .reviews-slider
+    .slick-arrow
+      top: 0
+    .slick-prev
+      left: -100px
+    .slick-next
+      right: -100px
+
   .container
     padding-left: 15px
     padding-right: 15px
@@ -69,6 +77,9 @@
       max-width: 150px
 
 @media (max-width: 1300px)
+  .reviews-nav-slider
+    width: 1140px
+
   .main-mnu
     display: none
 
@@ -77,6 +88,24 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .s-reviews
+    padding: 50px 0
+    .section-title
+      margin-bottom: 35px
+
+  .reviews-nav-slider
+    width: 100%
+
+  .reviews-slider
+    width: 100%
+    padding: 0 75px
+    .slick-prev
+      left: 0
+    .slick-next
+      right: 0
+    .slick-dots
+      margin-top: 30px
 
   .label-checkbox
     font-size: 12px
@@ -191,6 +220,9 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .reviews-slider
+    padding: 0
+
   .catalog-wrap
     grid-row-gap: 70px
 
@@ -230,6 +262,9 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .reviews-slider .slick-dots button
+    margin: 0 7px
 
   form
     h3
@@ -299,6 +334,9 @@
       margin-left: 15px
 
 @media (max-width: 410px)
+
+  .review-slide
+    font-size: 14px
 
   .advantages-form
     text-align: center

@@ -113,6 +113,58 @@ $(document).ready(function(){
         }
     });
 
+    $('.reviews-slider').slick({
+        // arrows:false,
+        dots: true,
+        infinite:true,
+        speed:500,
+        fade: true,
+        slidesToShow:1,
+        asNavFor: '.reviews-nav-slider',
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    adaptiveHeight: true
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    adaptiveHeight: true
+                }
+            }
+        ]
+    });
+
+
+    $('.reviews-nav-slider').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        asNavFor: '.reviews-slider',
+        dots: false,
+        centerMode: true,
+        focusOnSelect: true,
+        arrows:false,
+        centerPadding: 0,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+
+    });
+
 
     /** FORMS */
     var uPhone = $('.user-phone');
