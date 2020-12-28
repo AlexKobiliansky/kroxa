@@ -129,6 +129,9 @@ nav
     background-color: #e08b18
     color: #fff
     border-color: #e08b18
+  &.disabled
+    pointer-events: none
+    filter: grayscale(.7)
 
 
 
@@ -197,6 +200,9 @@ form
       background-color: #f2dfe1
       &::placeholder
         color: rgba($acc-red, .61)!important
+  textarea
+    resize: none
+    height: 130px
 
 
 .label-checkbox
@@ -233,6 +239,120 @@ form
   border-bottom: 1px solid #fff
   border-left: 1px solid #fff
   transform: rotate(-50deg)
+
+
+//preloader
+.preloader
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 999
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: #e8e8e8
+
+.sk-chasing-dots
+  width: 4em
+  height: 4em
+  position: relative
+  margin: auto
+  text-align: center
+  animation: sk-chasing-dots-rotate 2s infinite linear
+
+.sk-chasing-dots .sk-child
+  width: 2em
+  height: 2em
+  display: inline-block
+  position: absolute
+  top: 0
+  border-radius: 100%
+  animation: sk-chasing-dots-bounce 2s infinite ease-in-out
+
+.sk-chasing-dots .sk-dot-1
+  background-color: $acc-blue
+
+.sk-chasing-dots .sk-dot-2
+  top: auto
+  bottom: 0
+  animation-delay: -1s
+  background-color: $acc-orange
+
+
+@-webkit-keyframes sk-chasing-dots-rotate
+  100%
+    transform: rotate(360deg)
+
+@keyframes sk-chasing-dots-rotate
+  100%
+    transform: rotate(360deg)
+
+@-webkit-keyframes sk-chasing-dots-bounce
+  0%, 100%
+    transform: scale(0)
+  50%
+    transform: scale(1)
+
+@keyframes sk-chasing-dots-bounce
+  0%, 100%
+    transform: scale(0)
+  50%
+    transform: scale(1)
+
+
+//MY_MFP_ZOOM_IN
+.my-mfp-zoom-in
+  .zoom-anim-dialog, .popup-form
+    opacity: 0
+    transition: all 0.5s ease-in-out
+    transform: scale(0.7)
+  &.mfp-ready .zoom-anim-dialog, &.mfp-ready .popup-form
+    opacity: 1
+    transform: scale(1)
+  &.mfp-removing .zoom-anim-dialog, &.mfp-removing .popup-form
+    transform: scale(0.7)
+    opacity: 0
+  &.mfp-bg
+    opacity: 0
+    transition: opacity 0.5s ease-out
+  &.mfp-ready.mfp-bg
+    opacity: .9
+  &.mfp-removing.mfp-bg
+    opacity: 0
+
+.mfp-close-btn-in .mfp-close
+  color: #fff
+
+
+.popup-form
+  display: block
+  width: 100%
+  position: relative
+  max-width: 496px
+  margin: 0 auto
+  background-color: #f0f8fa
+  padding: 0 38px 33px
+  border-radius: 10px
+  overflow: hidden
+  .label-checkbox
+    font-size: 12px
+  .form-header
+    line-height: 1
+    background-color: #4c5f7f
+    color: #fff
+    font-weight: 700
+    font-size: 30px
+    width: calc(100% + 76px)
+    position: relative
+    left: -38px
+    padding: 22px 38px 20px
+    margin-bottom: 35px
+  .form-labels-wrap
+    width: 280px
 
 
 

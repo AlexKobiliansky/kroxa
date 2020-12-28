@@ -85,6 +85,13 @@ $(document).ready(function(){
         $(this).toggleClass('opened');
     });
 
+    $('html').click(function(e) {
+        if((!$(e.target).hasClass('droppy__trigger')) && (!$(e.target).hasClass('droppy__drop')))
+        {
+            $('.droppy__parent').removeClass('opened');
+        }
+    });
+
     $('.intro-slider').owlCarousel({
         loop:true,
         nav:true,
@@ -162,8 +169,9 @@ $(document).ready(function(){
                 }
             }
         ]
-
     });
+
+    $('.preloader').fadeOut();
 
 
     /** FORMS */
@@ -183,16 +191,36 @@ $(document).ready(function(){
 
     $('input[type="checkbox"]').styler();
 
+    $(function() {
+        $("a[href='#popup-form']").magnificPopup({
+            type: "inline",
+            fixedContentPos: !1,
+            fixedBgPos: !0,
+            overflowY: "auto",
+            closeBtnInside: !0,
+            preloader: !1,
+            midClick: !0,
+            removalDelay: 300,
+            mainClass: "my-mfp-zoom-in"
+        })
+    });
+
     //E-mail Ajax Send
-    $("form").submit(function() { //Change
+    $(".send-form").submit(function() { //Change
         var th = $(this);
+        var t = th.find(".btn").text();
+        th.find(".btn").prop("disabled", "disabled").addClass("disabled").text("Отправлено!");
 
         $.ajax({
             type: "POST",
             url: "mail.php", //Change
             data: th.serialize()
         }).done(function() {
-
+            setTimeout(function() {
+                th.find(".btn").removeAttr('disabled').removeClass("disabled").text(t);
+                th.trigger("reset");
+                $.magnificPopup.close();
+            }, 2000);
         });
         return false;
     });

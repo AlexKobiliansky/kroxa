@@ -330,6 +330,10 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .popup-form
+    .form-header
+      font-size: 24px
+
   .foot-item
     width: 100%
     text-align: center
@@ -433,6 +437,18 @@
       margin-left: 15px
 
 @media (max-width: 410px)
+
+  .popup-form
+    padding-left: 15px
+    padding-right: 15px
+    .form-labels-wrap
+      width: 100%
+    .form-header
+      padding-left: 15px
+      width: calc(100% + 30px)
+      left: -15px
+    .btn-wrap
+      text-align: center
 
   .review-slide
     font-size: 14px
