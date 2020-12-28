@@ -163,6 +163,77 @@ nav
   line-height: 1
   margin-bottom: 0
 
+form
+  h3
+    font-size: 30px
+    line-height: 1.1
+    margin-bottom: 5px
+  label
+    display: block
+    margin-bottom: 20px
+    position: relative
+    span
+      display: block
+      line-height: 1.5
+    &.has-error
+      span
+        color: $acc-red
+    .help-block
+      position: absolute
+      right: 0
+      font-size: 12px
+  input, textarea
+    width: 100%
+    line-height: 1
+    background-color: #fff
+    padding: 10px 20px 10px
+    border: none
+    border-radius: 22px
+    color: $text
+    &::placeholder
+      color: rgba($text, .63)
+    &.error
+      color: $acc-red
+      background-color: #f2dfe1
+      &::placeholder
+        color: rgba($acc-red, .61)!important
+
+
+.label-checkbox
+  display: flex
+  justify-content: space-between
+  align-items: center
+  letter-spacing: 0.02em
+  line-height: 1
+  span
+    width: calc(100% - 38px)
+    display: inline-block
+  a
+    color: #68c7ec
+    text-decoration: underline
+    &:hover
+      text-decoration: none
+
+.jq-checkbox
+  width: 26px
+  height: 26px
+  border-radius: 50%
+  background: #fff
+  border: none!important
+  box-shadow: none
+  margin-right: 0
+  &.checked
+    background-color: $acc-orange
+
+
+.jq-checkbox.checked .jq-checkbox__div
+  width: 13px
+  height: 6px
+  margin: 8px 0 0 7px
+  border-bottom: 1px solid #fff
+  border-left: 1px solid #fff
+  transform: rotate(-50deg)
+
 
 
 

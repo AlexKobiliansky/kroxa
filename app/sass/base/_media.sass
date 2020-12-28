@@ -78,6 +78,22 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .label-checkbox
+    font-size: 12px
+
+  .advantages-form
+    padding-left: 50px
+    &:before
+      display: none
+
+  .adv-item
+    padding: 15px
+    .svg
+      width: 40px
+    span
+      width: calc(100% - 55px)
+      font-size: 14px
+
   .section-title
     font-size: 36px
 
@@ -116,6 +132,23 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .s-advantages
+    padding-top: 35px
+    padding-bottom: 50px
+    &:before
+      height: 50px
+      top: -50px
+
+  .advantages-wrap
+    grid-template-columns: repeat(1, 1fr)
+
+  .advantages-left
+    margin-bottom: 30px
+
+  .advantages-form
+    padding-left: 0
+
 
   .s-catalog
     .section-title
@@ -198,6 +231,17 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  form
+    h3
+      font-size: 24px
+
+  .advantages-items-wrap
+    grid-template-columns: repeat(1, 1fr)
+    .svg
+      width: 60px
+    span
+      font-size: 16px
+
   .section-title
     font-size: 28px
 
@@ -255,6 +299,17 @@
       margin-left: 15px
 
 @media (max-width: 410px)
+
+  .advantages-form
+    text-align: center
+    .form-labels-wrap
+      width: 100%
+      margin-bottom: 20px
+    .label-checkbox
+      text-align: left
+    label
+      span
+        text-align: left
 
   .s-catalog
     padding: 20px 0 75px
