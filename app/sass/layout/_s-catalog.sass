@@ -1,0 +1,58 @@
+.s-catalog
+  position: relative
+  overflow: hidden
+  padding: 50px 0 250px
+  .section-title
+    margin-bottom: 80px
+  .container
+    position: relative
+
+.catalog-wrap
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  grid-gap: 110px 16px
+
+.catalog-decor
+  position: absolute
+  border-radius: 50%
+  &-1
+    width: 412px
+    height: 412px
+    background-color: $acc-blue
+    opacity: .47
+    top: 50%
+    left: -318px
+    transform: translateY(-50%)
+  &-2
+    width: 580px
+    height: 580px
+    background-color: #faf5ef
+    opacity: .73
+    right: -222px
+    bottom: -337px
+
+
+.cat-item
+  display: flex
+  &>div
+    width: 50%
+  &-left
+    padding-right: 20px
+  &-title
+    font-size: 30px
+    font-weight: 700
+    line-height: 1
+    position: relative
+    padding-bottom: 15px
+    margin-bottom: 30px
+    &:after
+      content: ''
+      position: absolute
+      width: calc(100% - 75px)
+      height: 2px
+      background-color: #e8e8e8
+      left: 0
+      bottom: 0
+  &-desc
+    margin-bottom: 45px
+

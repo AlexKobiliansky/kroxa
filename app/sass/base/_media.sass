@@ -77,6 +77,22 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .section-title
+    font-size: 36px
+
+  .s-catalog
+    padding-bottom: 150px
+
+  .cat-item
+    flex-direction: column-reverse
+    &>div
+      width: 100%
+    &-right
+      margin-bottom: 20px
+      img
+        margin: 0 auto
+
   .s-intro
     overflow: hidden
 
@@ -100,6 +116,18 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .s-catalog
+    .section-title
+      margin-bottom: 35px
+
+  .cat-item
+    &-title
+      font-size: 24px
+      padding-bottom: 10px
+      margin-bottom: 20px
+    &-desc
+      margin-bottom: 30px
 
   .intro-slide
     padding-left: 55px
@@ -129,6 +157,9 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .catalog-wrap
+    grid-row-gap: 70px
 
   .s-intro
     padding-top: 25px
@@ -166,6 +197,21 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .section-title
+    font-size: 28px
+
+  .cat-item
+    &-left
+      padding-right: 0
+    &-title
+      font-size: 20px
+    &-desc
+      font-size: 14px
+    .btn
+      font-size: 14px
+      padding: 14px 14px 12px
+      width: 100%
 
   .intro-slider
     padding-bottom: 30px
@@ -209,6 +255,12 @@
       margin-left: 15px
 
 @media (max-width: 410px)
+
+  .s-catalog
+    padding: 20px 0 75px
+
+  .catalog-wrap
+    grid-template-columns: repeat(1, 1fr)
 
   .intro-decor
     &-3
