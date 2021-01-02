@@ -95,6 +95,9 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .category-wrapper
+    grid-template-columns: repeat(3, 1fr)
+
   .page-decor-4
     display: none
 
@@ -200,6 +203,18 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .product-item
+    padding-left: 20px
+    padding-right: 20px
+    &-title
+      font-size: 18px
+    &-img
+      padding-bottom: 15px
+      &:after
+        width: 140px
+    .label
+      font-size: 12px
+
   .p-catalog
     padding-bottom: 80px
 
@@ -272,6 +287,14 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .filters-line
+    font-size: 14px
+    .span
+      display: none
+
+  .category-wrapper
+    grid-template-columns: repeat(2, 1fr)
 
   .page-decor
     transform: scale(.7)
@@ -372,6 +395,22 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .product-item
+    padding-left: 15px
+    padding-right: 15px
+    .svg
+      right: 10px
+    &-labels
+      left: 10px
+    &-img
+      height: 150px
+    &-title
+      font-size: 16px
+    &-prices
+      font-size: 18px
+      .old
+        font-size: 14px
 
   .breadcrumbs
     padding-top: 25px
@@ -488,6 +527,27 @@
       margin-left: 15px
 
 @media (max-width: 410px)
+
+  .filters-line
+    font-size: 12px
+    input, span
+      padding: 7px 12px 5px
+    input
+      padding-top: 4px
+      padding-bottom: 3px
+
+  .product-item
+    padding-left: 20px
+    padding-right: 20px
+    .svg
+      right: 20px
+    &-labels
+      left: 20px
+    &-img
+      height: 220px
+
+  .category-wrapper
+    grid-template-columns: repeat(1, 1fr)
 
   .breadcrumbs
     padding-top: 10px

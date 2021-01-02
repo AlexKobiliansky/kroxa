@@ -173,6 +173,24 @@ $(document).ready(function(){
 
     $('.preloader').fadeOut();
 
+    $('.filter').click(function(e){
+        e.preventDefault();
+
+        $(this).addClass('active').siblings('.filter').removeClass('active');
+    });
+
+    function heightses() {
+        if ($(window).width()>480) {
+            $('.product-item-title').matchHeight({byRow: true});
+            $('.product-item-prices').matchHeight({byRow: true});
+        }
+    }
+
+    $(window).resize(function() {
+        heightses();
+    });
+
+    heightses();
 
     /** FORMS */
     var uPhone = $('.user-phone');

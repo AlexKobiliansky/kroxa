@@ -47,6 +47,7 @@ gulp.task('scripts', function() {
 		'app/libs/form-styler/jquery.formstyler.min.js',
 		'app/libs/slick-slider/slick.min.js',
 		'app/libs/magnificPopup/jquery.magnific-popup.min.js',
+		'app/libs/matchHeight/jquery.matchHeight-min.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
