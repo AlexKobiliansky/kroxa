@@ -354,6 +354,33 @@ form
   .form-labels-wrap
     width: 280px
 
+.decor
+  position: absolute
+  border-radius: 50%
+
+section
+  .breadcrumbs
+    font-size: 12px
+    a
+      position: relative
+      display: inline-block
+      color: #7f96bc
+      text-decoration: none
+      &:hover
+        color: $acc-darkorange
+      &:after
+        content: ' / '
+      &:last-child
+        pointer-events: none
+        color: $text
+        &:after
+          display: none
+
+.page-title
+  font-size: 50px
+  line-height: 1.2
+  margin-bottom: 50px
+
 
 
 

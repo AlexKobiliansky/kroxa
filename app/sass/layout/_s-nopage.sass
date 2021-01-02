@@ -3,6 +3,8 @@
   text-align: center
   letter-spacing: 0.05em
   min-height: calc(100vh - 130px)
+  overflow: hidden
+  position: relative
   display: flex
   flex-direction: column
   justify-content: center
@@ -16,6 +18,11 @@
     text-decoration: underline
     &:hover
       text-decoration: none
+  .container
+    display: flex
+    flex-direction: column
+    justify-content: center
+    position: relative
 
 .nopage-subtitle
   font-weight: 700
@@ -25,3 +32,19 @@
 
 .nopage-desc
   margin-bottom: 45px
+
+.nopage-decor
+  &-1
+    width: 417px
+    height: 417px
+    background-color: $acc-blue
+    opacity: .47
+    top: 0
+    left: -315px
+  &-2
+    width: 580px
+    height: 580px
+    background-color: #faf5ef
+    opacity: .73
+    right: -395px
+    bottom: -390px
