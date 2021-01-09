@@ -102,7 +102,7 @@ $(document).ready(function(){
         mouseDrag: false,
         touchDrag: false,
         smartSpeed:700,
-        // autoplay: true,
+        autoplay: true,
         autoplayTimeout: 7000,
         autoplaySpeed: 2000,
         navText: false,
@@ -116,6 +116,37 @@ $(document).ready(function(){
             },
             768: {
                 nav: true,
+            }
+        }
+    });
+
+    $('.similars-slider').owlCarousel({
+        loop:false,
+        nav:true,
+        items: 5,
+        dots: false,
+        smartSpeed:700,
+        navText: false,
+        margin: 12,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false,
+                dots: true
+            },
+            440: {
+                items: 2,
+                nav: false,
+                dots: true
+            },
+            768: {
+                items: 3,
+            },
+            992: {
+                items: 3,
+            },
+            1200: {
+                items: 5
             }
         }
     });
@@ -218,9 +249,13 @@ $(document).ready(function(){
     });
 
     function heightses() {
+
+
         if ($(window).width()>480) {
             $('.product-item-title').matchHeight({byRow: true});
             $('.product-item-prices').matchHeight({byRow: true});
+        } else {
+            $('.similars-slider .product-item-title').matchHeight({byRow: true});
         }
     }
 
