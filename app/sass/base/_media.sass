@@ -17,6 +17,23 @@
 
 @media (max-width: 1500px)
 
+  .product
+    &-left
+      width: 700px
+    &-right
+      width: calc(100% - 720px)
+    &-slide
+      padding-right: 10px
+    &-buttons
+      .btn
+        padding-left: 15px
+        padding-right: 15px
+
+  .product-slider
+    width: calc(100% - 190px)
+    &-nav
+      width: 180px
+
   .s-nopage
     padding: 30px 15px 50px
     h1
@@ -94,6 +111,16 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .product-wrap
+    flex-direction: column
+
+  .product
+    &-left
+      width: 100%
+      margin-bottom: 40px
+    &-right
+      width: 100%
 
   .category-wrapper
     grid-template-columns: repeat(3, 1fr)
@@ -288,6 +315,29 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .product-slider-wrap
+    flex-direction: column
+
+  .product-slider
+    width: 100%
+    &-nav
+      width: 100%
+      .slick-arrow
+        z-index: 2
+        &.slick-prev
+          left: 15px
+          top: 50%
+          transform: translateY(-50%)
+        &.slick-next
+          right: 15px
+          bottom: auto
+          top: 50%
+          left: auto
+          transform: translateY(-50%) rotate(180deg)
+
+  .product-nav
+    margin: 0 5px
+
   .filters-line
     font-size: 14px
     .span
@@ -395,6 +445,31 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .product-left
+    margin-bottom: 20px
+
+  .product-labels
+    .label
+      font-size: 12px
+      padding: 7px 12px 6px
+
+  .product-slide
+    height: 300px
+    padding: 20px 10px 10px
+
+  .product-nav
+    padding: 0
+    height: 100px!important
+    background-size: 80px auto
+
+  .product-bottomline
+    flex-direction: column
+    align-items: center
+    margin-top: 15px
+
+  .product-price
+    margin-bottom: 15px
 
   .product-item
     padding-left: 15px
@@ -527,6 +602,57 @@
       margin-left: 15px
 
 @media (max-width: 410px)
+
+  .product-slide
+    height: 260px
+
+  .product-nav
+    height: 80px!important
+    background-size: 60px auto
+
+  .product-block
+    font-size: 14px
+    h3
+      padding-left: 0
+
+  .product-char
+    padding-left: 10px
+    padding-right: 10px
+
+  .product-color
+    padding: 0
+
+  .product-color
+    .jq-selectbox__select
+      font-size: 14px
+      padding-left: 28px
+      padding-right: 30px
+      border-radius: 7px
+      margin-left: 5px
+      &:before
+        width: 12px
+        height: 12px
+
+  .product-color .jq-selectbox li
+    font-size: 13px
+
+  .product-serv
+    padding: 0
+    span
+      position: relative
+      top: 2px
+
+  .product-buttons
+    flex-wrap: wrap
+    .btn
+      margin-left: 0
+      width: calc(100% - 51px)
+    .btn-orange
+      width: 100%
+      order: 3
+      margin-top: 15px
+
+
 
   .filters-line
     font-size: 12px

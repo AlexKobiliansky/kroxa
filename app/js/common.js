@@ -171,7 +171,45 @@ $(document).ready(function(){
         ]
     });
 
+    $('.product-slider').slick({
+        arrows:false,
+        dots: false,
+        infinite:true,
+        speed:500,
+        fade: true,
+        slidesToShow:1,
+        asNavFor: '.product-slider-nav'
+    });
+
+
+    $('.product-slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.product-slider',
+        dots: false,
+        centerMode: false,
+        focusOnSelect: true,
+        vertical: true,
+        verticalSwiping: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    vertical: false,
+                    verticalSwiping: false,
+                }
+            }
+        ]
+    });
+
     $('.preloader').fadeOut();
+
+
+
+    $('.product-slider').photoswipe({
+        showAnimationDuration: 0,
+        hideAnimationDuration: 0
+    });
 
     $('.filter').click(function(e){
         e.preventDefault();
@@ -207,7 +245,7 @@ $(document).ready(function(){
         scrollToTopOnError: false
     });
 
-    $('input[type="checkbox"]').styler();
+    $('input[type="checkbox"], select').styler();
 
     $(function() {
         $("a[href='#popup-form']").magnificPopup({
@@ -241,5 +279,28 @@ $(document).ready(function(){
             }, 2000);
         });
         return false;
+    });
+
+    $('.product-color li ').each(function(){
+        let th = $(this);
+        let color = th.data('color');
+        th.cssBefore('background', color);
+    });
+
+    function getSelectColor(){
+        $('.jq-selectbox.product-color-select').each(function(){
+            let th = $(this);
+            let selectedItem = th.find('li.selected');
+            let color = selectedItem.data('color');
+            let input = th.find('.jq-selectbox__select');
+
+            input.cssBefore('background', color);
+        });
+    }
+
+    getSelectColor();
+
+    $('.jq-selectbox.product-color-select').change(function(){
+        getSelectColor();
     });
 });

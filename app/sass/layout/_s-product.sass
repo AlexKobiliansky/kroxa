@@ -1,0 +1,232 @@
+.s-product
+  padding-bottom: 45px
+
+.product-wrap
+  display: flex
+  justify-content: space-between
+
+.product
+  &-left
+    width: 810px
+  &-right
+    width: calc(100% - 844px)
+
+
+.product-slider-wrap
+  display: flex
+  justify-content: space-between
+  position: relative
+
+.product-slider
+  width: calc(100% - 238px)
+
+.product-labels
+  position: absolute
+  z-index: 2
+  top: 0
+  left: 0
+  .label
+    font-size: 16px
+    padding: 10px 19px 8px
+    border-radius: 10px
+
+
+.product-slide
+  padding: 40px 40px 10px 40px
+  height: 445px
+  img
+    width: 100%
+    height: 100%
+    object-fit: contain
+
+.product-slider-nav
+  width: 224px
+  position: relative
+  .slick-arrow
+    position: absolute
+    font-size: 0
+    width: 15px
+    height: 15px
+    background-image: url('../img/icons/arrow-text.svg')
+    cursor: pointer
+    +mt(.3s)
+    background-color: transparent
+    border: none
+    +bg-cover
+    left: 50%
+    transform: rotate(90deg)
+    &:hover
+      background-image: url('../img/icons/arrow-orange.svg')
+    &.slick-prev
+      top: -20px
+    &.slick-next
+      bottom: -7px
+      transform: rotate(-90deg)
+
+.product-nav
+  height: 138px!important
+  padding: 20px
+  background-size: 100px auto
+  background-position: center center
+  background-repeat: no-repeat
+  background-color: #f7f7f7
+  margin-bottom: 13px
+  border-radius: 10px
+  outline: none
+  cursor: pointer
+  &.slick-current
+    background-color: #cff2fb
+
+
+.product-block
+  background-color: #def4fa
+  padding: 18px 20px
+  border-radius: 10px
+  margin-bottom: 9px
+  &:last-child
+    margin-bottom: 0
+  h3
+    font-size: 21px
+    line-height: 1
+    margin-bottom: 12px
+    padding-left: 22px
+
+.product-char
+  display: flex
+  justify-content: space-between
+  align-items: center
+  line-height: 1
+  padding: 8px 22px 6px
+  border-radius: 7px
+  &>div
+    width: 50%
+  &-value
+    font-weight: 700
+    text-align: right
+  &:nth-child(odd)
+    background-color: #fff
+
+
+.product-color
+  display: flex
+  align-items: center
+  padding: 0 22px
+  margin-bottom: 0
+  span
+    display: inline-block
+    margin-right: 3px
+  .jq-selectbox__select
+    height: auto
+    font-size: 16px
+    font-family: $default-font
+    line-height: 1
+    background: #fff
+    box-shadow: none
+    border: none!important
+    position: relative
+    padding-left: 38px
+    padding-top: 8px
+    padding-bottom: 6px
+    border-radius: 10px
+    &:before
+      content: ''
+      position: absolute
+      width: 16px
+      height: 16px
+      border-radius: 50%
+      left: 9px
+      top: 50%
+      transform: translateY(-50%)
+  .jq-selectbox__trigger
+    border-left: none
+  .jq-selectbox__trigger-arrow
+    border: none
+    width: 10px
+    height: 10px
+    background-image: url('../img/icons/arrow-text.svg')
+    +bg-cover
+    transform: translateY(-50%) rotate(-90deg)
+    top: 50%
+    position: absolute
+  .jq-selectbox
+    li
+      padding-left: 20px
+      &:before
+        background-color: transparent
+        width: 8px
+        height: 8px
+        left: 6px
+        top: 50%
+        transform: translateY(-50%)
+
+
+.product-serv
+  display: flex
+  align-items: center
+  margin-bottom: 16px
+  padding: 0 22px
+  &:last-child
+    margin-bottom: 0
+  .jq-checkbox
+    width: 20px
+    height: 20px
+    border: 1px solid $text!important
+    margin-right: 13px
+    &.checked
+      border-color: $acc-orange!important
+  sup
+    font-size: 10px
+  .jq-checkbox.checked .jq-checkbox__div
+    width: 10px
+    height: 5px
+    margin: 5px 0 0 4px
+  span
+    cursor: pointer
+
+
+.product-bottomline
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin-top: 27px
+
+.product-price
+  span
+    font-size: 30px
+    font-weight: 700
+    display: inline-block
+    margin-left: 5px
+    position: relative
+    top: 5px
+
+.product-to-favorites
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  width: 45px
+  height: 45px
+  border-radius: 50%
+  border: 1px solid rgba($text, .35)
+  margin-left: 6px
+  font-size: 0
+  .svg
+    position: relative
+    //top: 1px
+    //left: 1px
+    width: 22px
+    height: auto
+    fill: $text
+    +mt(.3s)
+  &:hover
+    .svg
+      fill: $acc-orange
+
+.product-buttons
+  display: flex
+  align-items: center
+  .btn
+    padding-left: 30px
+    padding-right: 30px
+    margin-left: 6px
+
+
