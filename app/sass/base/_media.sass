@@ -25,6 +25,10 @@
 
 @media (max-width: 1500px)
 
+  .order-form
+    .col-xl-9
+      padding-right: 30px
+
   .product
     &-left
       width: 700px
@@ -108,6 +112,18 @@
       max-width: 150px
 
 @media (max-width: 1300px)
+
+  .order-form
+    padding-bottom: 0
+    .col-xl-9
+      padding-right: 8px
+    .form-labels-wrap
+      padding-right: 0
+    &-bottom
+      padding-bottom: 0
+    &-desc
+      padding: 25px 0
+
   .reviews-nav-slider
     width: 1140px
 
@@ -119,6 +135,13 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .s-order
+    padding-bottom: 50px
+
+  .order-form
+    padding-right: 0
+    padding-bottom: 0
 
   .order-total
     &-buttons
@@ -342,6 +365,31 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .order-form
+    .form-labels-wrap
+      padding-bottom: 0
+      label
+        margin-bottom: 20px
+    &-top
+      .form-labels-wrap
+        flex-direction: column
+        align-items: flex-start
+      label
+        width: 100%!important
+        margin-left: 0!important
+        margin-right: 0!important
+    &-middle
+      .form-labels-wrap
+        flex-wrap: wrap
+        justify-content: space-between
+        label
+          margin-right: 0
+          width: calc(50% - 15px)
+    &-bottom
+      flex-direction: column
+      .label-checkbox
+        width: 100%
+
   .cart-item
     flex-direction: column
     align-items: center
@@ -487,6 +535,10 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .order-form
+    &-bottom
+      padding-top: 25px
 
   .s-cart
     padding-bottom: 50px
@@ -659,6 +711,26 @@
       margin-left: 15px
 
 @media (max-width: 410px)
+
+  .order-form
+    input
+      padding-left: 15px
+      padding-right: 15px
+    .radio-wrap
+      justify-content: space-between
+      label
+        margin-right: 0
+        width: calc(50% - 10px)
+        span
+          padding-left: 10px
+    &-middle
+      .form-labels-wrap
+        label
+          width: calc(50% - 10px)
+    &-bottom
+      .label-checkbox
+        span
+          font-size: 12px
 
   .cart-item
     font-size: 14px

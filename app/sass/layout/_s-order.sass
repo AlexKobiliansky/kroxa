@@ -1,0 +1,83 @@
+.s-order
+  padding-bottom: 90px
+
+
+.order-form
+  .col-xl-9
+    padding-right: 114px
+  h3
+    font-size: 21px
+    margin-bottom: 20px
+  .form-labels-wrap
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-bottom: 30px
+    border-bottom: 1px solid #e8e8e8
+    padding-right: 120px
+    label
+      margin-bottom: 0
+      display: block
+      span
+        margin-bottom: 5px
+  input
+    background-color: #efefef
+    padding-left: 27px
+    padding-right: 27px
+    width: 100%
+    &:disabled
+      background-color: darken(#efefef, 5%)
+  &-top
+    label
+      width: calc((100% - 280px)/2)
+      &:nth-child(2)
+        width: 200px
+        margin: 0 40px
+  &-middle
+    padding-top: 30px
+    .form-labels-wrap
+      justify-content: flex-start
+    label
+      width: 185px
+      margin-right: 45px
+      &:nth-child(3)
+        width: 75px
+      &:nth-child(4)
+        width: 107px
+      &:last-child
+        margin-right: 0
+  .radio-wrap
+    display: flex
+    align-items: center
+    label
+      display: inline-flex
+      align-items: center
+      margin-right: 50px
+      width: auto
+      span
+        width: calc(100% - 26px)
+        padding-left: 20px
+        cursor: pointer
+      .jq-radio
+        margin-right: 0
+      &:last-child
+        margin-right: 0
+
+  &-bottom
+    padding-top: 40px
+    padding-bottom: 25px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    .btn
+      width: 210px
+    .label-checkbox
+      width: calc(100% - 210px)
+      padding-right: 30px
+      span
+        font-size: 14px
+  &-desc
+    font-size: 14px
+
+
+
