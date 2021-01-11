@@ -1,0 +1,57 @@
+.s-about
+  padding-bottom: 50px
+  h3
+    font-size: 30px
+    margin-bottom: 15px
+  h1
+    margin-bottom: 0
+  .row
+    .col-lg-6
+      &:first-child
+        margin-top: 40px
+
+.about-img
+  position: relative
+  border-radius: 10px
+  overflow: hidden
+  width: calc(100% - 50px)
+  margin-left: auto
+  height: 405px
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.nums-items-wrap
+  display: flex
+  justify-content: space-between
+  grid-template-columns: repeat(5, 1fr)
+  grid-gap: 30px
+  padding: 35px 0
+
+.num-item
+  position: relative
+  line-height: 1
+  padding-left: 20px
+  padding-right: 30px
+  &-num
+    font-size: 50px
+    font-weight: 900
+    position: relative
+  &-title
+    font-size: 24px
+    position: relative
+  &:before
+    content: ''
+    position: absolute
+    width: 55px
+    height: 55px
+    border-radius: 50%
+    background-color: #cff2fb
+    left: 0
+    top: -20px
+
+.serts-wrap
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  grid-gap: 20px

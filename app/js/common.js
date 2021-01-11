@@ -242,6 +242,8 @@ $(document).ready(function(){
         hideAnimationDuration: 0
     });
 
+    $('.serts-wrap').photoswipe();
+
     $('.filter').click(function(e){
         e.preventDefault();
 
