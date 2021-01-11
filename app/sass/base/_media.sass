@@ -136,6 +136,12 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .s-favorites
+    padding-bottom: 50px
+
+  .favorites-wrap
+    grid-template-columns: repeat(4, 1fr)
+
   .s-order
     padding-bottom: 50px
 
@@ -270,6 +276,9 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .favorites-wrap
+    grid-template-columns: repeat(3, 1fr)
+
   .cart-item
     &-info
       flex-direction: column
@@ -364,6 +373,9 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .favorites-wrap
+    grid-template-columns: repeat(2, 1fr)
 
   .order-form
     .form-labels-wrap
@@ -535,6 +547,9 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .favorites-wrap
+    grid-template-columns: repeat(1, 1fr)
 
   .order-form
     &-bottom
