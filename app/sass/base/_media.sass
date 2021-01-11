@@ -136,6 +136,11 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .s-delivery
+    padding-bottom: 30px
+    .hide-on-mobile
+      display: none
+
   .s-favorites
     padding-bottom: 50px
 
@@ -276,6 +281,19 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .section-form
+    width: 500px
+    .form-labels-wrap
+      flex-direction: column
+      padding: 0 50px
+      label
+        width: 100%
+    .btn
+      width: 100%
+      margin-top: 20px
+      &:before
+        display: none
+
   .favorites-wrap
     grid-template-columns: repeat(3, 1fr)
 
@@ -373,6 +391,9 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .section-form
+    width: 400px
 
   .favorites-wrap
     grid-template-columns: repeat(2, 1fr)
@@ -547,6 +568,14 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .section-form
+    width: 100%
+
+  .delivery-images
+    img
+      display: block
+      margin: 0 auto 20px
 
   .favorites-wrap
     grid-template-columns: repeat(1, 1fr)
@@ -726,6 +755,10 @@
       margin-left: 15px
 
 @media (max-width: 410px)
+
+  .section-form
+    .form-labels-wrap
+      padding: 0 
 
   .order-form
     input

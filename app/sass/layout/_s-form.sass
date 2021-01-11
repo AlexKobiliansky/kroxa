@@ -1,0 +1,37 @@
+.s-form
+  background-image: url('../img/bg-sectionform.jpg')
+  +bg-cover
+
+.section-form
+  padding: 40px 0
+  width: 830px
+  margin: 0 auto
+  color: #fff
+  h3
+    text-align: center
+    margin-bottom: 20px
+  .form-labels-wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+  label
+    width: 328px
+    &:nth-child(2)
+      width: 180px
+  .btn
+    width: 220px
+    position: relative
+    padding-top: 13px
+    padding-bottom: 12px
+    &:before
+      content: ''
+      position: absolute
+      width: 16px
+      height: 16px
+      background-image: url('../img/icons/arrow-white.svg')
+      +bg-cover
+      left: -35px
+      top: 50%
+      transform: translateY(-50%) rotate(180deg)
+  .help-block
+    display: none
