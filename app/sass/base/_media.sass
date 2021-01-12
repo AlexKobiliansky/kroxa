@@ -136,6 +136,14 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .contacts-wrap
+    top: 0
+    width: 100%
+    margin-bottom: 20px
+    padding: 20px 30px
+    font-size: 14px
+
+
   .p-reviews
     padding-bottom: 50px
 
@@ -311,6 +319,19 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .contacts-wrap
+    flex-direction: column
+    align-items: flex-start
+    font-size: 18px
+    padding: 30px 60px
+  .con-item
+    margin-bottom: 25px
+    &:last-child
+      margin-bottom: 0
+
+  #map
+    height: 400px
 
   .s-installment
     padding-bottom: 50px
@@ -626,6 +647,12 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .contacts-wrap
+    padding: 30px
+    font-size: 16px
+
+
+
   .reviews-form
     .help-block
       display: none
@@ -847,6 +874,18 @@
       margin-left: 15px
 
 @media (max-width: 410px)
+
+  .contacts-wrap
+    padding: 15px
+    font-size: 14px
+
+  .con-item
+    .svg
+      width: 28px
+    span
+      width: calc(100% - 28px)
+
+  
 
   .reviews-items-wrap
     height: 400px
