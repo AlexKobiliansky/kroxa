@@ -233,6 +233,20 @@ $(document).ready(function(){
         ]
     });
 
+    $('.reviews-items-wrap').niceScroll({
+        cursoropacitymin: 1,
+        cursorcolor:"#006599",
+        cursorwidth:"4px",
+        cursorborder:"",
+        cursorborderradius:"2px",
+        background:"#f0f8fa",railpadding: {
+            top: 0,
+            right: 0,
+            left: 0,
+            bottom: 0
+        },
+    });
+
     $('.preloader').fadeOut();
 
 
@@ -282,7 +296,10 @@ $(document).ready(function(){
         scrollToTopOnError: false
     });
 
-    $('input[type="checkbox"], select, input[type="radio"]').styler();
+    $('input[type="checkbox"], select, input[type="radio"], input[type="file"]').styler({
+        filePlaceholder: "Прикрепить аватарку",
+        fileBrowse: "",
+    });
 
     $('input[type=radio][name=Доставка]').on('change', function(){
         if (this.value == 'Доставка') {
